@@ -1,0 +1,5 @@
+PNG icon
+Favicon
+Splashscreen
+Start page
+New project screen

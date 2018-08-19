@@ -1,0 +1,43 @@
+Addons have infos in XML as API v1
+
+Reading:
+Heading
+Paragraph
+Blockquote
+Badge
+
+Media:
+Image
+
+Structure:
+Article
+Span
+Div
+
+Input:
+Button
+Input
+Text area
+
+Navigation:
+Tiled list
+Tab menu
+Menu
+
+Apps:
+Scroller
+
+ZeroNet:
+ZeroFrame
+Database
+Merger
+
+CSS sets:
+full-size, no-opacity, color
+
+Settings:
+Favicon
+zn:
+Cloneable
+
+Navbar, content and comments are automatically added in a new project.
