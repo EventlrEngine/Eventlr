@@ -1,4 +1,3 @@
-Favicon
 Splashscreen
 Start page
 New project screen
