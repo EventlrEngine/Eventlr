@@ -1,4 +1,3 @@
-PNG icon
 Favicon
 Splashscreen
 Start page
