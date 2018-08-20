@@ -7,5 +7,9 @@ Project pannel
 Files pannel
 Live preview
 Preview in browser
+save changes in html
+save changes in css
+event sheets
 append elements
+save changes in coffee script
 Button: on click > open menu
