@@ -1,6 +1,7 @@
 Splashscreen
 Start page
 New project screen
+Tab menus
 Navbar, content and comments are automatically added in a new project.
 
 Project panel
@@ -8,6 +9,7 @@ Settings:
 Favicon
 zn:
 Cloneable
+save changes in content.json
 
 Element's settings in Project panel
 CSS sets:
