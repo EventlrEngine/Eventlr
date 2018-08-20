@@ -1,0 +1,6 @@
+Addons have infos in XML as API v1
+
+ZeroNet:
+ZeroFrame
+Database
+Merger

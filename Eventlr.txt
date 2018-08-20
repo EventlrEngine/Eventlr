@@ -3,8 +3,19 @@ Favicon
 Splashscreen
 Start page
 New project screen
-Project pannel
-Files pannel
+Navbar, content and comments are automatically added in a new project.
+
+Project panel
+Settings:
+Favicon
+zn:
+Cloneable
+
+Element's settings in Project panel
+CSS sets:
+full-size, no-opacity, color
+
+Files panel
 Live preview
 Preview in browser
 save changes in html
