@@ -3,3 +3,9 @@ Favicon
 Splashscreen
 Start page
 New project screen
+Project pannel
+Files pannel
+Live preview
+Preview in browser
+append elements
+Button: on click > open menu
