@@ -1,4 +1,5 @@
 Splashscreen
+License
 Start page
 New project screen
 Tab menus
@@ -23,4 +24,6 @@ save changes in css
 event sheets
 append elements
 save changes in coffee script
+change site title
+change favicon
 Button: on click > open menu
