@@ -23,7 +23,10 @@ save changes in html
 save changes in css
 event sheets
 append elements
+
 save changes in coffee script
+https://www.npmjs.com/package/coffeescript
+
 change site title
 change favicon
 Button: on click > open menu
