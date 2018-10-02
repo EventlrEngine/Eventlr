@@ -1,0 +1,5 @@
+Plugins haves infos in HTML as API v1
+
+ZeroNet:
+Database
+Merger

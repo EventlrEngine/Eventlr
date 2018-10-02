@@ -1,0 +1,11 @@
+<conditions cid="1">
+<category ccgid="1" name="Platform">
+<cond cid="1-1" id="ifzeronet" name="Is on ZeroNet" s="if document.location.href.indexOf(&apos;wrapper_nonce&apos;) > 0"></cond>
+</category>
+</conditions>
+
+<actions aid="">
+<category acgid="" name="">
+<act aid="" id="" name="" s=""></act>
+</category>
+</actions>
