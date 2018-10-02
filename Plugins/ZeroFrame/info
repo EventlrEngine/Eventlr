@@ -1,6 +1,6 @@
 <name>ZeroFrame</name>
 <id>zeroframe</id>
-<version>1.0.0.2</version>
+<version>1.0.0.3</version>
 <description>API to communicate between ZeroNet sites and ZeroNet &gt; Browser</description>
 <author>Daniell Mesquita</author>
 <helpurl>https://github.com/DaniellMesquita</helpurl>
