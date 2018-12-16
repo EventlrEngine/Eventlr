@@ -1,0 +1,8 @@
+<name>Web</name>
+<id>web</id>
+<version>1.0.0.0</version>
+<description>Behavior in web browsers</description>
+<author>Daniell Mesquita</author>
+<helpurl>https://github.com/eventlr-engine/Web-platform/</helpurl>
+<platform>Web</platform>
+<icon>favicon.png</icon>
