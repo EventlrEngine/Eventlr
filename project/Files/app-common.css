@@ -1,0 +1,25 @@
+/*
+	Framework.js r1 | (c) 2014 - 2018 Plasmmer | https://plasnerd.github.io/Framework.js/LICENSE.md
+*/
+
+.scroller {
+	overflow: auto;
+}
+
+/* #alphabeticalsele{
+    position: fixed;
+    top: 22px;
+    width: 100%;
+    height: calc(100% - 63px);
+    overflow: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: none;
+}
+#alphabeticalsele .alphabetic{clear: none; position: initial; display: inline-block; float: none}
+.alphabetic.inactive {
+    border-color: rgba(255, 255, 255, 0.52);
+    color: rgba(255, 255, 255, 0.52);
+    border: none;
+} */

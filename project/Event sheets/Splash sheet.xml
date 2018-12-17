@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Splash sheet</name>
+    <events>
+        <comment>On start of layout, set window title to Eventlr.</comment>
+        <event-block sid="378819889893501">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="567136198704109" type="System" />
+            </conditions>
+            <actions>
+                <action id="32" name="Maximize" sid="598037119800698" type="Electron" />
+                <action id="30" name="Set title" sid="846300614863977" type="Electron">
+                    <param id="0" name="Title">&quot;Eventlr | Loading...&quot;</param>
+                </action>
+                <action id="14" name="Log" sid="310542645028916" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Changed window title to &apos;Eventlr | Loading...&apos;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>On completed loading, go to App layout.</comment>
+        <event-block sid="193780140852667">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="826974624500701" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="452834083979405" type="System">
+                    <param id="0" name="Layout">App</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

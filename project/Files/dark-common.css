@@ -1,0 +1,87 @@
+.color-bg {background:#00A18570!important}
+body {
+    background: #232A31!important;
+    color: #a7a7a7!important;
+}
+.h2, h2 {
+    color: #8e9194!important;
+}
+.h3, h3 {
+    color: #8e9194!important;
+}
+.h4, h4 {
+    color: #8e9194!important;
+}
+.h5, h5 {
+    color: #8e9194!important;
+}
+.h6, h6 {
+    color: #8e9194!important;
+}
+h2.color{color:#00A18570!important}
+h3.color{color:#00A18570!important}
+h4.color{color:#00A18570!important}
+h5.color{color:#00A18570!important}
+h6.color{color:#00A18570!important}
+.p, p {
+    color: #8e9194!important;
+}
+p.color{color:#00A18570!important}
+a{color:#58dbec!important}
+::selection {
+    background: #00A18570!important;
+    color: #a7a7a7!important;
+}
+code {
+    background: #aa4eaf!important;
+    color: #efcdf3!important;
+}
+.blockquote, blockquote {
+    background: #1E2429!important;
+    color: #8e9194!important;
+}
+.blockquote, blockquote:active{background:transparent!important}
+.textarea, textarea {
+    background: #1E2429!important;
+    color: #8e9194!important;
+}
+.textarea, textarea:focus{background: transparent!important}
+button:not(.md-button):not(.btn) {
+    background: #000!important;
+    color: #a7a7a7!important;
+}
+button:not(.md-button):not(.btn):hover {
+    background: #a7a7a7!important;
+    color: #000!important;
+}
+button.color{background:#00A185!important;color:#fffc!important;font-weight:bold!important;padding:10px!important;font-size:16px!important}
+button.color:hover{background:#ffffffb3!important;color:#00A185!important}
+.input, input{border:1px solid #8e9194!important;color:#8e9194!important}
+.input, input:hover{background:#8e9194!important}
+.input, input:focus{background:#d6d6d6!important;color:#000!important}
+ul.tiled li p {
+    color: #fff!important;
+}
+.header, header {
+    background: #00A18570!important;
+}
+.logo, logo {
+    color: #8e9194!important;
+}
+header nav ul li {
+    color: #a7a7a7!important;
+}
+header nav ul li p {
+    color: #a7a7a7!important;
+}
+.nav-tabs .nav-link{color:#fff!important}
+.footer, footer {
+    background: #00A18550!important;
+}
+.navmenu {
+    background: rgba(0, 0, 0, 0.9)!important;
+    border-color: #fff!important;
+}
+.navmenu ul > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)!important;
+}

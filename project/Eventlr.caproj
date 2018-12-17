@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Eventlr</name>
+    <description></description>
+    <version>r1</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.plasmmer.eventlr</app-id>
+    <unique-id>3edwekmoh0bdz</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Pinco, Scirra" id="AdvTextBox" version="1.700000048">Advanced Text box</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Armaldio" id="armaldio_electron" version="1">Electron</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Splash</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Custom</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Text" sid="488778711237327">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AddConditions" sid="275837036067204">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="AddActions" sid="751262629939673">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="CoffeeScript" sid="285983083936881">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="consolelogtxt" sid="638090233725053">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="Convert" sid="788913694416761">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="HTMLIFrame" sid="916858067976082">
+            <plugin id="HTML_iFrame" />
+        </object-type>
+        <object-type name="TaskList" sid="297998074353326">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="HTMLIFrame2" sid="103803971231536">
+            <plugin id="HTML_iFrame" />
+        </object-type>
+        <object-type name="Electron" sid="568867484877459">
+            <plugin id="armaldio_electron" />
+        </object-type>
+        <object-type name="Browser" sid="471939738006530">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="UI" sid="560166749705248">
+            <plugin id="HTML_iFrame" />
+        </object-type>
+        <object-type name="AJAX" sid="836827457841995">
+            <plugin id="AJAX" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Splash.xml</layout>
+        <layout>App.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>App sheet.xml</event-sheet>
+        <event-sheet>Splash sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Electron" uid="12" />
+        <global-instance type="Browser" uid="13" />
+        <global-instance type="AJAX" uid="5" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+            <file name="icon-16.png" />
+        </file-folder>
+        <file name="style.css" />
+        <file name="icon.png" />
+        <file name="loading.gif" />
+        <file name="popper.min.js" />
+        <file name="bootstrap.min.js" />
+        <file name="material.min.js" />
+        <file name="material.min.css" />
+        <file name="app-common.css" />
+        <file name="robotofont.css" />
+        <file name="roboto-cyrillic.woff2" />
+        <file name="roboto-cyrillicext.woff2" />
+        <file name="roboto-greek.woff2" />
+        <file name="roboto-greekext.woff2" />
+        <file name="roboto-latin.woff2" />
+        <file name="roboto-latinext.woff2" />
+        <file name="roboto-vietnamese.woff2" />
+        <file name="iconsfont.css" />
+        <file name="font.eot" />
+        <file name="font.ttf" />
+        <file name="font.woff" />
+        <file name="font.woff2" />
+        <file name="jquery.min.js" />
+        <file name="dark-common.css" />
+        <file name="page-common.css" />
+    </files-folder>
+</c2project>

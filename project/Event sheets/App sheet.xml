@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>App sheet</name>
+    <events>
+        <variable constant="0" name="nextevent" sid="892019285904084" static="0" type="number">1</variable>
+        <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
+        <variable constant="0" name="nextaction" sid="203836370324529" static="0" type="number">2</variable>
+        <event-block sid="155560204341686">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
+            </conditions>
+            <actions>
+                <action id="19" name="Include Javascript file" sid="287889435979552" type="UI">
+                    <param id="0" name="Javascript file">&quot;jquery.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="406479633958176" type="UI">
+                    <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="449453807288538" type="UI">
+                    <param id="0" name="Javascript file">&quot;bootstrap.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="617059601472650" type="UI">
+                    <param id="0" name="Javascript file">&quot;material.min.js&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="717295991544556" type="UI">
+                    <param id="0" name="CSS file">&quot;material.min.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="619637854037738" type="UI">
+                    <param id="0" name="CSS file">&quot;page-common.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="136264522101822" type="UI">
+                    <param id="0" name="CSS file">&quot;app-common.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="281244924847992" type="UI">
+                    <param id="0" name="CSS file">&quot;dark-common.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="422311736345791" type="UI">
+                    <param id="0" name="CSS file">&quot;robotofont.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="557148267205950" type="UI">
+                    <param id="0" name="CSS file">&quot;iconsfont.css&quot;</param>
+                </action>
+                <action id="30" name="Set title" sid="752116031735626" type="Electron">
+                    <param id="0" name="Title">&quot;Eventlr - Start page&quot;</param>
+                </action>
+                <action id="14" name="Log" sid="223505224237286" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Changed window title to &apos;Eventlr - Start page&apos;&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="934692656573359" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/start.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="242176821890864" type="AJAX">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/start.html&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="939065510127217" type="TaskList">
+                    <param id="0" name="Text">&quot;TASK LIST&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="470413284085334" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Read events&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="344061552862847" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Compile events to JS&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="558932153040150" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Splash screen&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="412791748959582" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* New project button&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="781979774116016" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Files panel&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="726945360987020" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can create new .coffee&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="670023209436521" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Visual event sheet page&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="712839431869542" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Load event options from Plugins&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="578106281917645" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can create new event&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="996819146732937" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* When creating new event, add Condition&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="504721583630708" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can add new conditions to event&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="264858457011458" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can add actions to event&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="594148934384387" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can save project to a folder&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="409508339736895" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can load project from a folder&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="283016837949142">
+            <conditions>
+                <condition id="0" name="On completed" sid="820668352917802" type="AJAX">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="591053277616635" type="UI">
+                    <param id="0" name="ID/Class">&quot;#start&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="963521979068980">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="999978696012430" type="AddConditions">
+                    <param id="0" name="Text to compare">&quot;If on ZeroNet&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="298168290883125" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="195489416971005" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="192361920613675" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set selection" sid="568956471361555" type="AddConditions">
+                    <param id="0" name="Index">0</param>
+                </action>
+                <action id="7" name="Append HTML" sid="727039361260371" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;event eid=&apos;&quot; &amp; nextevent &amp; &quot;&apos;&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="877321149889320" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;cond cid=&apos;&quot; &amp; nextevent  &amp; &quot;-&quot; &amp; nextcondition &amp; &quot;&apos; id=&apos;ifzeronet&apos; s=&apos;if document.location.href.indexOf(&amp;apos;wrapper_nonce&amp;apos;) &amp;gt; 0&apos;&gt;&lt;/cond&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="548196628693504" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="774255204180703" type="System">
+                    <param id="0" name="Variable">nextevent</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="939369573626960" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="719130963175593" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="250613829969271" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="188727979039463" type="System">
+                    <param id="0" name="Variable">nextaction</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="541304985225863">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="455506396401266" type="AddConditions">
+                    <param id="0" name="Text to compare">&quot;Else&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="872031451828195" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="294106062130294" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="874806492145240" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set selection" sid="856155916013597" type="AddConditions">
+                    <param id="0" name="Index">0</param>
+                </action>
+                <action id="7" name="Append HTML" sid="705059841823201" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;event eid=&apos;&quot; &amp; nextevent &amp; &quot;&apos;&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="743033578726426" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;cond cid=&apos;&quot; &amp; nextevent  &amp; &quot;-&quot; &amp; nextcondition &amp; &quot;&apos; id=&apos;else&apos; s=&apos;else&apos;&gt;&lt;/cond&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="132735347369852" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="805732289141384" type="System">
+                    <param id="0" name="Variable">nextevent</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="930943457078732" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="989204946198961" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="412650772922985" type="System">
+                    <param id="0" name="Variable">nextcondition</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="781057866671942" type="System">
+                    <param id="0" name="Variable">nextaction</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="658271752430949">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="924305556335438" type="AddActions">
+                    <param id="0" name="Text to compare">&quot;Console log&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="866544954721143" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="676842778825434" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set selection" sid="627099438717662" type="AddActions">
+                    <param id="0" name="Index">0</param>
+                </action>
+                <action id="7" name="Append HTML" sid="460987606567331" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;act aid=&apos;&quot; &amp; nextevent - 1 &amp; &quot;-&quot; &amp; nextaction &amp; &quot;&apos; id=&apos;consolelog&apos; s=&apos;console.log &amp;apos;&quot; &amp; consolelogtxt.Text &amp; &quot;&amp;apos;&apos;&gt;&lt;/act&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="481810042073114" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set text" sid="800286100562033" type="consolelogtxt">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="749441779448669" type="System">
+                    <param id="0" name="Variable">nextaction</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345402997548435">
+            <conditions>
+                <condition id="0" name="On clicked" sid="805568043814740" type="Convert" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
