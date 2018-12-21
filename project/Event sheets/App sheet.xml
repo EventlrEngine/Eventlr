@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
+        <variable constant="0" name="NewProject" sid="336447206508423" static="0" type="number">0</variable>
         <variable constant="0" name="nextevent" sid="892019285904084" static="0" type="number">1</variable>
         <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
         <variable constant="0" name="nextaction" sid="203836370324529" static="0" type="number">2</variable>
@@ -32,7 +33,7 @@
                 <action id="2" name="Import CSS file" sid="136264522101822" type="UI">
                     <param id="0" name="CSS file">&quot;app-common.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="281244924847992" type="UI">
+                <action disabled="1" id="2" name="Import CSS file" sid="281244924847992" type="UI">
                     <param id="0" name="CSS file">&quot;dark-common.css&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="422311736345791" type="UI">
@@ -60,17 +61,17 @@
                 <action id="0" name="Set text" sid="939065510127217" type="TaskList">
                     <param id="0" name="Text">&quot;TASK LIST&quot;</param>
                 </action>
+                <action id="18" name="Append text" sid="412791748959582" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* New project button&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="594148934384387" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Can save project to a folder&quot;</param>
+                </action>
                 <action id="18" name="Append text" sid="470413284085334" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Read events&quot;</param>
                 </action>
                 <action id="18" name="Append text" sid="344061552862847" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Compile events to JS&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="558932153040150" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* Splash screen&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="412791748959582" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* New project button&quot;</param>
                 </action>
                 <action id="18" name="Append text" sid="781979774116016" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Files panel&quot;</param>
@@ -96,9 +97,6 @@
                 <action id="18" name="Append text" sid="264858457011458" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Can add actions to event&quot;</param>
                 </action>
-                <action id="18" name="Append text" sid="594148934384387" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* Can save project to a folder&quot;</param>
-                </action>
                 <action id="18" name="Append text" sid="409508339736895" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Can load project from a folder&quot;</param>
                 </action>
@@ -117,6 +115,118 @@
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="814682153590476">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="419842780640461" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="722752461412383">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="950335213601593" type="UI">
+                            <param id="0" name="C2">&quot;newproject&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="21" name="Execute Javascript" sid="994324397914466" type="UI">
+                            <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(options)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="978873101893136">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="554040406654020" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="727731287288323">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="512282766847681" type="UI">
+                            <param id="0" name="C2">&quot;fromtemplate&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="298369073576196" type="System">
+                            <param id="0" name="Variable">NewProject</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="282027586168974">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="712137005022802" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="237874817476894">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="189778943332805" type="UI">
+                            <param id="0" name="C2">&quot;blankproject&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719368702706887" type="System">
+                            <param id="0" name="Variable">NewProject</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="999186553707532">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="878188215661867" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="967177613422967">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="381616785287365" type="UI">
+                            <param id="0" name="C2">&quot;createnewproject&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="21" name="Execute Javascript" sid="651466832141865" type="UI">
+                            <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="362985782473286">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="108022839557739" type="System">
+                                    <param id="0" name="Variable">NewProject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="21" name="Execute Javascript" sid="288230439658401" type="UI">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(options)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="140195585318196">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="361396808317890" type="System">
+                                    <param id="0" name="Variable">NewProject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="963521979068980">
             <conditions>

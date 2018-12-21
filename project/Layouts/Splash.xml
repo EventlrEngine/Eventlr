@@ -35,7 +35,7 @@
                         <class-optional></class-optional>
                         <initial-visibility>Visible</initial-visibility>
                         <tooltip></tooltip>
-                        <background></background>
+                        <background>transparent</background>
                         <border></border>
                         <scroll>Auto</scroll>
                         <object>HTML</object>

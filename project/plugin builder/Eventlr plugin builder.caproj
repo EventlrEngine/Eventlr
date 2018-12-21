@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Eventlr plugin builder</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3u65qf5w09r4k</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Pinco, Scirra" id="AdvTextBox" version="1.700000048">Advanced Text box</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+        <plugin author="Armaldio" id="armaldio_electron" version="1">Electron</plugin>
+        <plugin author="Scirra" id="filechooser" version="1">File chooser</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Custom</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Text" sid="333716199225651">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Name" sid="478410559082760">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="ID" sid="304100427902001">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="Version" sid="283721932690734">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="Description" sid="992582258937054">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="Author" sid="517921010958854">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="HelpURL" sid="549952289197942">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="CategoryPlatformBtn" sid="678969171452151">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="FileChooser" sid="908725082637043">
+            <plugin id="filechooser" />
+        </object-type>
+        <object-type name="Name_Event" sid="146382550426261">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="ConditionActionBtn" sid="462949733476035">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="ID_Event" sid="965023701118838">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="Tooltip" sid="323394343078911">
+            <plugin id="AdvTextBox" />
+        </object-type>
+        <object-type name="status" sid="886913582518990">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Notebook Positivo\Desktop\status.png" />
+        </object-type>
+        <object-type name="StatusText" sid="197034827334813">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Open" sid="246649072987251">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="New" sid="202631935775065">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Save" sid="915098555252732">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Electron" sid="195911533295828">
+            <plugin id="armaldio_electron" />
+        </object-type>
+        <object-type name="AJAX" sid="260727957551940">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Icon" sid="749605475404225">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="430384585270622" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="XML" sid="964575245941350">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="Function" sid="750091408528610">
+            <plugin id="Function" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Info.xml</layout>
+        <layout>Events.xml</layout>
+        <layout>Start.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Info sheet.xml</event-sheet>
+        <event-sheet>Events sheet.xml</event-sheet>
+        <event-sheet>Start sheet.xml</event-sheet>
+        <event-sheet>Common sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Electron" uid="42" />
+        <global-instance type="AJAX" uid="43" />
+        <global-instance type="Function" uid="22" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Start sheet</name>
+    <events>
+        <include>Common sheet</include>
+        <event-block sid="737562383879590">
+            <conditions>
+                <condition id="0" name="On clicked" sid="209966356302717" type="Open" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="810724623087356" type="System">
+                    <param id="0" name="Variable">Untitled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="970224765736845" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="20" name="Show dialog" sid="995796566415812" type="Electron">
+                    <param id="0" name="Title">&quot;Choose your plugin&apos;s folder&quot;</param>
+                    <param id="1" name="Default path">&quot;&quot;</param>
+                    <param id="2" name="Confirmation text (optional)">&quot;&quot;</param>
+                    <param id="3" name="Filters (TODO)">&quot;&quot;</param>
+                    <param id="4" name="Properties">&quot;openDirectory&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="667091147332631">
+            <conditions>
+                <condition id="8" name="On validate dialog" sid="122935733115711" type="Electron" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="606206907594556" type="StatusText">
+                    <param id="0" name="Text">&quot;Loading your plugin...&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="738667081645025" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="719578226826968" type="System">
+                    <param id="0" name="Variable">Folder</param>
+                    <param id="1" name="Value">Electron.ChosenPath</param>
+                </action>
+                <action id="-16" name="Wait" sid="458012266776561" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="816248222649034" type="System">
+                    <param id="0" name="Layout">Info</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="960374970503210">
+            <conditions>
+                <condition id="0" name="On clicked" sid="835872096512339" type="New" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="167363638255240" type="System">
+                    <param id="0" name="Variable">Untitled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="364427811269395" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="981518351027625" type="System">
+                    <param id="0" name="Layout">Info</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

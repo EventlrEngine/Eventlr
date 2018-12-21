@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Info sheet</name>
+    <events>
+        <include>Common sheet</include>
+        <variable constant="0" name="Type" sid="634214161192363" static="0" type="text"></variable>
+        <event-block sid="194496812618680">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="713836055615348" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="119984051310171">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="486873796730743" type="System">
+                            <param id="0" name="Variable">Untitled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="367701897975122" type="status">
+                            <param id="0" name="Y">-488</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="854727785555198" type="StatusText">
+                            <param id="0" name="Y">-295</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727196465596065">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="654348182490795" type="System">
+                            <param id="0" name="Variable">Untitled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="967378527392953" type="status">
+                            <param id="0" name="Y">-1</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="544429289568812" type="StatusText">
+                            <param id="0" name="Y">192</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="589326589650832" type="AJAX">
+                            <param id="0" name="Tag">&quot;loadPluginInfo&quot;</param>
+                            <param id="1" name="URL">Folder &amp; &quot;/info&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="796018689862094">
+            <conditions>
+                <condition id="0" name="On completed" sid="913396194999707" type="AJAX">
+                    <param id="0" name="Tag">&quot;loadPluginInfo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="613902831665446" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+                <action id="-16" name="Wait" sid="405740613706708" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="619867157991721" type="System">
+                    <param id="0" name="Variable">Name</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;name&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="679927252514649" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="700661747821193" type="System">
+                    <param id="0" name="Variable">ID</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;id&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="144390996729239" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="338156897126819" type="System">
+                    <param id="0" name="Variable">Version</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;version&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="672503079796870" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="675534036573243" type="System">
+                    <param id="0" name="Variable">Description</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;description&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="614920980544903" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="381623407684051" type="System">
+                    <param id="0" name="Variable">Author</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;author&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="821732022488434" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="832696044948382" type="System">
+                    <param id="0" name="Variable">HelpURL</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;helpurl&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="401138511683424" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="518010824443817" type="System">
+                    <param id="0" name="Variable">Category</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;category&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="168439950377522" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="811422483477038" type="System">
+                    <param id="0" name="Variable">Platform</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;platform&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="725220782383358" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="383852632239951" type="System">
+                    <param id="0" name="Variable">Icon</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;icon&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="897982183392093" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-2" name="Set Y" sid="117486273356551" type="status">
+                    <param id="0" name="Y">-488</param>
+                </action>
+                <action id="-2" name="Set Y" sid="541863507967734" type="StatusText">
+                    <param id="0" name="Y">-295</param>
+                </action>
+                <action id="-9" name="Set value" sid="443685791944578" type="System">
+                    <param id="0" name="Variable">FirstLoad</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="118400593209964">
+            <conditions>
+                <condition id="0" name="On function" sid="399494449608684" type="Function">
+                    <param id="0" name="Name">&quot;getText&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="755032111286975" type="Function">
+                    <param id="0" name="Value">XML.StringValue(&quot;/&quot; &amp; Function.Param(0) &amp; &quot;/text()&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="802216543926672">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="608121430701199" type="System">
+                    <param id="0" name="Variable">FirstLoad</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="601160927594798" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="284916866285355" type="Name">
+                    <param id="0" name="Text">Name</param>
+                </action>
+                <action id="0" name="Set text" sid="156972659703879" type="ID">
+                    <param id="0" name="Text">ID</param>
+                </action>
+                <action id="0" name="Set text" sid="943817064728733" type="Version">
+                    <param id="0" name="Text">Version</param>
+                </action>
+                <action id="0" name="Set text" sid="386582438237196" type="Description">
+                    <param id="0" name="Text">Description</param>
+                </action>
+                <action id="0" name="Set text" sid="153518184951216" type="Author">
+                    <param id="0" name="Text">Author</param>
+                </action>
+                <action id="0" name="Set text" sid="459861215363638" type="HelpURL">
+                    <param id="0" name="Text">HelpURL</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="909394645075785" type="System">
+                    <param id="0" name="Variable">Category</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;category&quot;)</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="302270103054135" type="System">
+                    <param id="0" name="Variable">Platform</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;platform&quot;)</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="614785399215045" type="System">
+                    <param id="0" name="Variable">Icon</param>
+                    <param id="1" name="Value">Function.Call(&quot;getText&quot;, &quot;icon&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="799950318248814" type="Save">
+                    <param id="0" name="Text">Category</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="525106935054540">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="997141325290956" type="CategoryPlatformBtn">
+                    <param id="0" name="Text to compare">&quot;Plugin&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="102967110762860" type="System">
+                    <param id="0" name="Variable">Type</param>
+                    <param id="1" name="Value">&quot;category&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="338890713810517">
+            <conditions>
+                <condition id="4" name="Compare selected item text" sid="881705511550488" type="CategoryPlatformBtn">
+                    <param id="0" name="Text to compare">&quot;Platform&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="600280755299262" type="System">
+                    <param id="0" name="Variable">Type</param>
+                    <param id="1" name="Value">&quot;platform&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="431469548490368">
+            <conditions>
+                <condition id="0" name="On changed" sid="774158301410976" type="FileChooser" />
+            </conditions>
+            <actions>
+                <action id="10" name="Load image from URL" sid="115976508151185" type="Icon">
+                    <param id="0" name="URI">FileChooser.FileURLAt(0)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="143039438950913">
+            <conditions>
+                <condition id="0" name="On clicked" sid="290854821665062" type="Save" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="804701448320979">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="839737108895729" type="System">
+                            <param id="0" name="Variable">Untitled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="20" name="Show dialog" sid="650477835075910" type="Electron">
+                            <param id="0" name="Title">&quot;Choose where to save your plugin&quot;</param>
+                            <param id="1" name="Default path">&quot;&quot;</param>
+                            <param id="2" name="Confirmation text (optional)">&quot;&quot;</param>
+                            <param id="3" name="Filters (TODO)">&quot;&quot;</param>
+                            <param id="4" name="Properties">&quot;openDirectory&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="720989087222765">
+            <conditions>
+                <condition id="8" name="On validate dialog" sid="652660516824806" type="Electron" />
+            </conditions>
+            <actions>
+                <action id="17" name="Create folder" sid="633953141036526" type="Electron">
+                    <param id="0" name="Path">Electron.ChosenPath &amp; &quot;/&quot; &amp; Name.Text</param>
+                </action>
+                <action id="-16" name="Wait" sid="522689467772004" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="23" name="Copy file" sid="665365841610245" type="Electron">
+                    <param id="0" name="Path">FileChooser.FileURLAt(0)</param>
+                    <param id="1" name="Destination">Electron.ChosenPath &amp; &quot;/&quot; &amp; Name.Text</param>
+                </action>
+                <action id="0" name="Write" sid="472583069050870" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.ChosenPath &amp; &quot;/&quot; &amp; Name.Text &amp; &quot;/info&quot;</param>
+                    <param id="2" name="Data">&quot;&lt;name&gt;&quot; &amp; Name.Text &amp; &quot;&lt;/name&gt;&quot; &amp; newline &amp; &quot;&lt;id&gt;&quot; &amp; ID.Text &amp; &quot;&lt;/id&gt;&quot; &amp; newline &amp; &quot;&lt;version&gt;&quot; &amp; Version.Text &amp; &quot;&lt;/version&gt;&quot; &amp; newline &amp; &quot;&lt;description&gt;&quot; &amp; description.Text &amp; &quot;&lt;/description&gt;&quot; &amp; newline &amp; &quot;&lt;author&gt;&quot; &amp; Author.Text &amp; &quot;&lt;/author&gt;&quot; &amp; newline &amp; &quot;&lt;helpurl&gt;&quot; &amp; HelpURL.Text &amp; &quot;&lt;/helpurl&gt;&quot; &amp; newline &amp; &quot;&lt;&quot; &amp; Type &amp; &quot;&gt;&quot; &amp; Name.Text &amp; &quot;&lt;/&quot; &amp; Type &amp; &quot;&gt;&quot; &amp; newline &amp; &quot;&lt;icon&gt;&quot; &amp; FileChooser.FileNameAt(0) &amp; &quot;&lt;/icon&gt;&quot;</param>
+                    <param id="3" name="Encoding Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

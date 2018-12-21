@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Common sheet</name>
+    <events>
+        <variable constant="0" name="Untitled" sid="212890488102395" static="0" type="number">0</variable>
+        <variable constant="0" name="FirstLoad" sid="970338608814618" static="0" type="number">1</variable>
+        <variable constant="0" name="Folder" sid="737951626617765" static="0" type="text"></variable>
+        <variable constant="0" name="Name" sid="165711128924580" static="0" type="text"></variable>
+        <variable constant="0" name="ID" sid="729086875270227" static="0" type="text"></variable>
+        <variable constant="0" name="Version" sid="598017385602450" static="0" type="text"></variable>
+        <variable constant="0" name="Description" sid="277919311775824" static="0" type="text"></variable>
+        <variable constant="0" name="Author" sid="240859508203187" static="0" type="text"></variable>
+        <variable constant="0" name="HelpURL" sid="116831139995686" static="0" type="text"></variable>
+        <variable constant="0" name="Category" sid="441948478393224" static="0" type="text"></variable>
+        <variable constant="0" name="Platform" sid="601807853215989" static="0" type="text"></variable>
+        <variable constant="0" name="Icon" sid="573572706917050" static="0" type="text"></variable>
+    </events>
+</c2eventsheet>

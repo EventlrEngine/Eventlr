@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Events sheet</name>
+    <events>
+        <include>Common sheet</include>
+        <variable constant="0" name="Conditions" sid="324152568229128" static="0" type="number">0</variable>
+        <variable constant="0" name="Actions" sid="849961825355052" static="0" type="number">0</variable>
+        <event-block sid="290057098779006">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="648819121976167" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="254484294857402" type="StatusText">
+                    <param id="0" name="Text">&quot;Conditions: &quot; &amp; Conditions &amp; &quot; | Actions: &quot; &amp; Actions</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
