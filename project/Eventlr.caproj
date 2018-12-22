@@ -96,6 +96,7 @@
     <event-folder>
         <event-sheet>App sheet.xml</event-sheet>
         <event-sheet>Splash sheet.xml</event-sheet>
+        <event-sheet>Common sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Electron" uid="12" />
@@ -134,8 +135,9 @@
         <file name="font.ttf" />
         <file name="font.woff" />
         <file name="font.woff2" />
-        <file name="jquery.min.js" />
         <file name="dark-common.css" />
+        <file name="1.11.0.min.js" />
+        <file name="page-custom.css" />
         <file name="page-common.css" />
     </files-folder>
 </c2project>

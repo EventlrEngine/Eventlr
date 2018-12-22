@@ -2,3 +2,4 @@
 #splash, #html{background: rgb(239, 239, 239);top: 0px!important;left: 0px!important;position: absolute!important;width: calc(100% + 0px) !important;height: calc(100% + 0px) !important}
 #logo{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:120px;border-radius: 20px}
 #logotext{font-size:66px}
+#bellowtabs{height:calc(100% - 48px)!important;overflow-x:hidden}

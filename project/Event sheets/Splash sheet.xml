@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Splash sheet</name>
     <events>
+        <include>Common sheet</include>
         <comment>On start of layout, set window title to Eventlr.</comment>
         <event-block sid="378819889893501">
             <conditions>

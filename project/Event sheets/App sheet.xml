@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
+        <include>Common sheet</include>
         <variable constant="0" name="NewProject" sid="336447206508423" static="0" type="number">0</variable>
         <variable constant="0" name="nextevent" sid="892019285904084" static="0" type="number">1</variable>
         <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
@@ -12,8 +13,11 @@
                 <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
             </conditions>
             <actions>
-                <action id="19" name="Include Javascript file" sid="287889435979552" type="UI">
-                    <param id="0" name="Javascript file">&quot;jquery.min.js&quot;</param>
+                <action disabled="1" id="19" name="Include Javascript file" sid="186333258357025" type="UI">
+                    <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="374758587597753" type="UI">
+                    <param id="0" name="CSS file">&quot;style.css&quot;</param>
                 </action>
                 <action id="19" name="Include Javascript file" sid="406479633958176" type="UI">
                     <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
@@ -29,6 +33,9 @@
                 </action>
                 <action id="2" name="Import CSS file" sid="619637854037738" type="UI">
                     <param id="0" name="CSS file">&quot;page-common.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="534920724400860" type="UI">
+                    <param id="0" name="CSS file">&quot;page-custom.css&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="136264522101822" type="UI">
                     <param id="0" name="CSS file">&quot;app-common.css&quot;</param>
@@ -57,6 +64,42 @@
                 <action id="0" name="Request URL" sid="242176821890864" type="AJAX">
                     <param id="0" name="Tag">&quot;start&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/start.html&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="754346211517411" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/newproject.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="720745448845973" type="AJAX">
+                    <param id="0" name="Tag">&quot;newproject&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/newproject.html&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="684937322314354" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/projectexamples.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="154393939123800" type="AJAX">
+                    <param id="0" name="Tag">&quot;projectexamplesdialog&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/projectexamples.html&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="189315633253329" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/implementation.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="235526885506901" type="AJAX">
+                    <param id="0" name="Tag">&quot;implementation&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/implementation.html&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="175519741886109" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="749052797152888" type="AJAX">
+                    <param id="0" name="Tag">&quot;projectexamples&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="939065510127217" type="TaskList">
                     <param id="0" name="Text">&quot;TASK LIST&quot;</param>
@@ -116,13 +159,84 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="814682153590476">
+        <event-block sid="314185511515319">
+            <conditions>
+                <condition id="0" name="On completed" sid="658630044908169" type="AJAX">
+                    <param id="0" name="Tag">&quot;projectexamples&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="897589184424322" type="System">
+                    <param id="0" name="Variable">projectexamples</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+                <action id="-16" name="Wait" sid="316524217135401" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="289067438451913" type="UI">
+                    <param id="0" name="ID/Class">&quot;#projectexamples&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">projectexamples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="284048100188827">
+            <conditions>
+                <condition id="0" name="On completed" sid="426400059279196" type="AJAX">
+                    <param id="0" name="Tag">&quot;newproject&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="311915822442073" type="UI">
+                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="335955655091301">
+            <conditions>
+                <condition id="0" name="On completed" sid="442604300658762" type="AJAX">
+                    <param id="0" name="Tag">&quot;projectexamplesdialog&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="581714611565629" type="UI">
+                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">AJAX.LastData</param>
+                </action>
+                <action id="-16" name="Wait" sid="401813886604659" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="159430331139520" type="UI">
+                    <param id="0" name="ID/Class">&quot;#projectexamplesdialog&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">projectexamples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="899267080927006">
+            <conditions>
+                <condition id="0" name="On completed" sid="575496000085459" type="AJAX">
+                    <param id="0" name="Tag">&quot;implementation&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="560014265376612" type="UI">
+                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="814682153590476">
             <conditions>
                 <condition id="3" name="On C2 Function" sid="419842780640461" type="UI" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="722752461412383">
+                <event-block disabled="1" sid="722752461412383">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="950335213601593" type="UI">
                             <param id="0" name="C2">&quot;newproject&quot;</param>
@@ -195,7 +309,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="21" name="Execute Javascript" sid="651466832141865" type="UI">
+                        <action id="17" name="Execute Javascript" sid="651466832141865" type="Browser">
                             <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
                         </action>
                     </actions>
@@ -207,10 +321,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="563031787112281" type="System" />
                             </conditions>
                             <actions>
-                                <action id="21" name="Execute Javascript" sid="288230439658401" type="UI">
-                                    <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(options)&quot;</param>
+                                <action id="17" name="Execute Javascript" sid="288230439658401" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(&apos;show&apos;)&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -221,6 +336,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="404110320971074" type="System" />
                             </conditions>
                             <actions />
                         </event-block>
