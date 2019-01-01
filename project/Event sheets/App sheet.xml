@@ -4,7 +4,17 @@
     <name>App sheet</name>
     <events>
         <include>Common sheet</include>
+        <comment>Sets if the new project is blank (2) or based on an template/example (1):</comment>
         <variable constant="0" name="NewProject" sid="336447206508423" static="0" type="number">0</variable>
+        <comment>Sets the amount of projects that user had created:</comment>
+        <variable constant="0" name="projectno" sid="700163428466507" static="0" type="number">0</variable>
+        <comment>Stores the name of the project:</comment>
+        <variable constant="0" name="ProjName" sid="491842839091289" static="0" type="text"></variable>
+        <comment>Sets if the project is not saved yet (0) or if is saved (1):</comment>
+        <variable constant="0" name="Saved" sid="827691407389779" static="0" type="number">1</variable>
+        <variable constant="0" name="nextHTML" sid="685205040290762" static="0" type="number">1</variable>
+        <variable constant="0" name="nextCSS" sid="899805035360780" static="0" type="number">1</variable>
+        <variable constant="0" name="nextJS" sid="372183628822240" static="0" type="number">1</variable>
         <variable constant="0" name="nextevent" sid="892019285904084" static="0" type="number">1</variable>
         <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
         <variable constant="0" name="nextaction" sid="203836370324529" static="0" type="number">2</variable>
@@ -13,8 +23,11 @@
                 <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="19" name="Include Javascript file" sid="186333258357025" type="UI">
-                    <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
+                <action id="19" name="Include Javascript file" sid="882374151284977" type="UI">
+                    <param id="0" name="Javascript file">&quot;framlr.js&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="177736397343674" type="UI">
+                    <param id="0" name="CSS file">&quot;framlr.css&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="374758587597753" type="UI">
                     <param id="0" name="CSS file">&quot;style.css&quot;</param>
@@ -70,6 +83,18 @@
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/newproject.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="444182556552892" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="175519741886109" type="Electron">
+                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="749052797152888" type="AJAX">
+                    <param id="0" name="Tag">&quot;projectexamples&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
+                </action>
                 <action id="0" name="Request URL" sid="720745448845973" type="AJAX">
                     <param id="0" name="Tag">&quot;newproject&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/newproject.html&quot;</param>
@@ -92,35 +117,14 @@
                     <param id="0" name="Tag">&quot;implementation&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/implementation.html&quot;</param>
                 </action>
-                <action id="9" name="Read" sid="175519741886109" type="Electron">
-                    <param id="0" name="Tag">&quot;start&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
-                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                </action>
-                <action id="0" name="Request URL" sid="749052797152888" type="AJAX">
-                    <param id="0" name="Tag">&quot;projectexamples&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
-                </action>
                 <action id="0" name="Set text" sid="939065510127217" type="TaskList">
                     <param id="0" name="Text">&quot;TASK LIST&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="412791748959582" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* New project button&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="594148934384387" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* Can save project to a folder&quot;</param>
                 </action>
                 <action id="18" name="Append text" sid="470413284085334" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Read events&quot;</param>
                 </action>
                 <action id="18" name="Append text" sid="344061552862847" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Compile events to JS&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="781979774116016" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* Files panel&quot;</param>
-                </action>
-                <action id="18" name="Append text" sid="726945360987020" type="TaskList">
-                    <param id="0" name="Text">newline &amp; &quot;* Can create new .coffee&quot;</param>
                 </action>
                 <action id="18" name="Append text" sid="670023209436521" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Visual event sheet page&quot;</param>
@@ -143,207 +147,386 @@
                 <action id="18" name="Append text" sid="409508339736895" type="TaskList">
                     <param id="0" name="Text">newline &amp; &quot;* Can load project from a folder&quot;</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="283016837949142">
-            <conditions>
-                <condition id="0" name="On completed" sid="820668352917802" type="AJAX">
-                    <param id="0" name="Tag">&quot;start&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="24" name="Get elements" sid="591053277616635" type="UI">
-                    <param id="0" name="ID/Class">&quot;#start&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
-                    <param id="2" name="Append">&quot;&quot;</param>
+                <action id="18" name="Append text" sid="700932367590164" type="TaskList">
+                    <param id="0" name="Text">newline &amp; &quot;* Portability: nextproject number as file instead of localstorage&quot;</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="314185511515319">
-            <conditions>
-                <condition id="0" name="On completed" sid="658630044908169" type="AJAX">
-                    <param id="0" name="Tag">&quot;projectexamples&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="897589184424322" type="System">
-                    <param id="0" name="Variable">projectexamples</param>
-                    <param id="1" name="Value">AJAX.LastData</param>
-                </action>
-                <action id="-16" name="Wait" sid="316524217135401" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="24" name="Get elements" sid="289067438451913" type="UI">
-                    <param id="0" name="ID/Class">&quot;#projectexamples&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">projectexamples</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="284048100188827">
-            <conditions>
-                <condition id="0" name="On completed" sid="426400059279196" type="AJAX">
-                    <param id="0" name="Tag">&quot;newproject&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="24" name="Get elements" sid="311915822442073" type="UI">
-                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
-                    <param id="2" name="Append">&quot;&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="335955655091301">
-            <conditions>
-                <condition id="0" name="On completed" sid="442604300658762" type="AJAX">
-                    <param id="0" name="Tag">&quot;projectexamplesdialog&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="24" name="Get elements" sid="581714611565629" type="UI">
-                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">AJAX.LastData</param>
-                </action>
-                <action id="-16" name="Wait" sid="401813886604659" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="24" name="Get elements" sid="159430331139520" type="UI">
-                    <param id="0" name="ID/Class">&quot;#projectexamplesdialog&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">projectexamples</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="899267080927006">
-            <conditions>
-                <condition id="0" name="On completed" sid="575496000085459" type="AJAX">
-                    <param id="0" name="Tag">&quot;implementation&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="24" name="Get elements" sid="560014265376612" type="UI">
-                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">AJAX.LastData</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="814682153590476">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="419842780640461" type="UI" />
-            </conditions>
-            <actions />
             <sub-events>
-                <event-block disabled="1" sid="722752461412383">
+                <event-block sid="762146041491330">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="950335213601593" type="UI">
-                            <param id="0" name="C2">&quot;newproject&quot;</param>
-                            <param id="1" name="Case">0</param>
+                        <condition id="3" name="Local key exists" sid="310673439880255" type="WebStorage">
+                            <param id="0" name="Key">&quot;projectno&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="21" name="Execute Javascript" sid="994324397914466" type="UI">
-                            <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(options)&quot;</param>
+                        <action id="-9" name="Set value" sid="884680247557936" type="System">
+                            <param id="0" name="Variable">projectno</param>
+                            <param id="1" name="Value">WebStorage.LocalValue(&quot;projectno&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="978873101893136">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="554040406654020" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="727731287288323">
+                <event-block sid="541362609906258">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="512282766847681" type="UI">
-                            <param id="0" name="C2">&quot;fromtemplate&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
+                        <condition id="-22" name="Else" sid="113169242850170" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="298369073576196" type="System">
-                            <param id="0" name="Variable">NewProject</param>
+                        <action id="-9" name="Set value" sid="860149758131429" type="System">
+                            <param id="0" name="Variable">projectno</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="282027586168974">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="712137005022802" type="UI" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="758060408643500" title="AJAX">
             <sub-events>
-                <event-block sid="237874817476894">
+                <comment>Ajax will load external HTML into the app. It&apos;s useful to make the main code simple, loading other contents as if they were modules that are loaded just when its need.</comment>
+                <event-block sid="283016837949142">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="189778943332805" type="UI">
-                            <param id="0" name="C2">&quot;blankproject&quot;</param>
-                            <param id="1" name="Case">0</param>
+                        <condition id="0" name="On completed" sid="820668352917802" type="AJAX">
+                            <param id="0" name="Tag">&quot;start&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="719368702706887" type="System">
-                            <param id="0" name="Variable">NewProject</param>
-                            <param id="1" name="Value">2</param>
+                        <action id="24" name="Get elements" sid="591053277616635" type="UI">
+                            <param id="0" name="ID/Class">&quot;#start&quot;</param>
+                            <param id="1" name="Set">AJAX.LastData</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="314185511515319">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="658630044908169" type="AJAX">
+                            <param id="0" name="Tag">&quot;projectexamples&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="897589184424322" type="System">
+                            <param id="0" name="Variable">projectexamples</param>
+                            <param id="1" name="Value">AJAX.LastData</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="316524217135401" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="289067438451913" type="UI">
+                            <param id="0" name="ID/Class">&quot;#projectexamples&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">projectexamples</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="284048100188827">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="426400059279196" type="AJAX">
+                            <param id="0" name="Tag">&quot;newproject&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="311915822442073" type="UI">
+                            <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                            <param id="1" name="Set">AJAX.LastData</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335955655091301">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="442604300658762" type="AJAX">
+                            <param id="0" name="Tag">&quot;projectexamplesdialog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="581714611565629" type="UI">
+                            <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">AJAX.LastData</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="401813886604659" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="159430331139520" type="UI">
+                            <param id="0" name="ID/Class">&quot;#projectexamplesdialog&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">projectexamples</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899267080927006">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="575496000085459" type="AJAX">
+                            <param id="0" name="Tag">&quot;implementation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="560014265376612" type="UI">
+                            <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="999186553707532">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="878188215661867" type="UI" />
-            </conditions>
-            <actions />
+        </event-group>
+        <event-group description="" sid="677605024447480" title="New project">
             <sub-events>
-                <event-block sid="967177613422967">
+                <event-block sid="279611342039280">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="381616785287365" type="UI">
-                            <param id="0" name="C2">&quot;createnewproject&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
+                        <condition id="3" name="On C2 Function" sid="656171423220462" type="UI" />
                     </conditions>
-                    <actions>
-                        <action id="17" name="Execute Javascript" sid="651466832141865" type="Browser">
-                            <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="362985782473286">
+                        <event-block sid="425329042911329">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="108022839557739" type="System">
-                                    <param id="0" name="Variable">NewProject</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="4" name="Compare C2 Function" sid="450410251767148" type="UI">
+                                    <param id="0" name="C2">&quot;close&quot;</param>
+                                    <param id="1" name="Case">0</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="563031787112281" type="System" />
                             </conditions>
                             <actions>
-                                <action id="17" name="Execute Javascript" sid="288230439658401" type="Browser">
-                                    <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(&apos;show&apos;)&quot;</param>
+                                <action id="1" name="Exit" sid="956292694965020" type="Electron" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="814682153590476">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="419842780640461" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="722752461412383">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="950335213601593" type="UI">
+                                    <param id="0" name="C2">&quot;newproject&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="21" name="Execute Javascript" sid="994324397914466" type="UI">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(options)&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="140195585318196">
+                    </sub-events>
+                </event-block>
+                <event-block sid="978873101893136">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="554040406654020" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="727731287288323">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="361396808317890" type="System">
-                                    <param id="0" name="Variable">NewProject</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                <condition id="4" name="Compare C2 Function" sid="512282766847681" type="UI">
+                                    <param id="0" name="C2">&quot;fromtemplate&quot;</param>
+                                    <param id="1" name="Case">0</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="404110320971074" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="298369073576196" type="System">
+                                    <param id="0" name="Variable">NewProject</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="282027586168974">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="712137005022802" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="237874817476894">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="189778943332805" type="UI">
+                                    <param id="0" name="C2">&quot;blankproject&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="719368702706887" type="System">
+                                    <param id="0" name="Variable">NewProject</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="999186553707532">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="878188215661867" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="967177613422967">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="381616785287365" type="UI">
+                                    <param id="0" name="C2">&quot;createnewproject&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="651466832141865" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>NewProject = 1 means the new project will be based on a template, NewProject = 2 means the new project will be blank</comment>
+                                <event-block sid="362985782473286">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="108022839557739" type="System">
+                                            <param id="0" name="Variable">NewProject</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="563031787112281" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="288230439658401" type="Browser">
+                                            <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(&apos;show&apos;)&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="140195585318196">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="361396808317890" type="System">
+                                            <param id="0" name="Variable">NewProject</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="404110320971074" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="24" name="Get elements" sid="218829304184576" type="UI">
+                                            <param id="0" name="ID/Class">&quot;#justifiedTab&quot;</param>
+                                            <param id="1" name="Set">&quot;&quot;</param>
+                                            <param id="2" name="Append">&quot;&lt;li class=nav-item closable&gt;&lt;a aria-controls=html&quot; &amp; nextHTML &amp; &quot; aria-selected=false class=nav-link data-toggle=tab href=#html&quot; &amp; nextHTML &amp; &quot; id=html&quot; &amp; nextHTML &amp; &quot;-tab role=tab&gt;&quot; &amp; HTML &amp; &quot; index.html&lt;/a&gt;&lt;/li&gt;&quot;</param>
+                                        </action>
+                                        <action id="24" name="Get elements" sid="915247316626651" type="UI">
+                                            <param id="0" name="ID/Class">&quot;#justifiedTabContent&quot;</param>
+                                            <param id="1" name="Set">&quot;&quot;</param>
+                                            <param id="2" name="Append">&quot;&lt;div aria-labelledby=&apos;html&quot; &amp; nextHTML &amp; &quot;-tab&apos; class=&apos;tab-pane fade&apos; id=&apos;html&quot; &amp; nextHTML &amp; &quot;&apos; role=&apos;tabpanel&apos;&gt;&lt;/div&gt;&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="665510742317957" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="221684497260360" type="System">
+                                            <param id="0" name="Variable">nextHTML</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="459610454172981" type="Browser">
+                                            <param id="0" name="Javascript">&quot;$(&apos;#justifiedTab li:nth-child(2) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                                        </action>
+                                        <action id="30" name="Set title" sid="133203122261385" type="Electron">
+                                            <param id="0" name="Title">&quot;Eventlr - Untitled project &quot; &amp; projectno</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="429707370606948" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Changed window title to  &amp; projectno&apos;Eventlr - Untitled project &quot; &amp; projectno &amp; &quot;&apos;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="209798410366670" type="System">
+                                            <param id="0" name="Variable">ProjName</param>
+                                            <param id="1" name="Value">&quot;Untitled project &quot; &amp; projectno</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>projectno (project number) counts how many projects you&apos;d already created. Its appended on new project title (example: Untitled project 1).&#x0D;&#x0A;1 means that its the first time using Eventlr, and it will create new folders: /data folder, and its /temp folder where the new projects will be stored.&#x0D;&#x0A;A .evproj inside the project folder will be created, containing the project&apos;s infos.</comment>
+                                        <event-block sid="688718872046769">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="809229358000078" type="System">
+                                                    <param id="0" name="Variable">projectno</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="441524588395934" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="17" name="Create folder" sid="160981208297658" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/data&quot;</param>
+                                                </action>
+                                                <action id="17" name="Create folder" sid="959085570256583" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/data/temp&quot;</param>
+                                                </action>
+                                                <action id="17" name="Create folder" sid="606680245237486" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="427397202395744" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="23" name="Copy file" sid="377823098492072" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/res/img/icon.png&quot;</param>
+                                                    <param id="1" name="Destination">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName</param>
+                                                </action>
+                                                <action id="0" name="Write" sid="892117664452275" type="Electron">
+                                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName &amp; &quot;/&quot; &amp; ProjName &amp; &quot;.evproj&quot;</param>
+                                                    <param id="2" name="Data">&quot;&lt;name&gt;&quot; &amp; ProjName &amp; &quot;&lt;/name&gt;&lt;icon&gt;icon.png&lt;/icon&gt;&quot;</param>
+                                                    <param id="3" name="Encoding Mode">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="709042453043470" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="238903907276743" type="System">
+                                                    <param id="0" name="Variable">projectno</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="112057764593917" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="0" name="Set local value" sid="645357756838345" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;projectno&quot;</param>
+                                                    <param id="1" name="Value">projectno</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>If the project isn&apos;t new, the project&apos;s folder will be created without needing to create its parents folders.</comment>
+                                        <event-block sid="297137620061899">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="271535863557493" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="17" name="Create folder" sid="525653195421404" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="384849233670188" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="23" name="Copy file" sid="870113945786060" type="Electron">
+                                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/res/img/icon.png&quot;</param>
+                                                    <param id="1" name="Destination">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName</param>
+                                                </action>
+                                                <action id="0" name="Write" sid="872036444614853" type="Electron">
+                                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/data/temp/&quot; &amp; ProjName &amp; &quot;/&quot; &amp; ProjName &amp; &quot;.evproj&quot;</param>
+                                                    <param id="2" name="Data">&quot;&lt;name&gt;&quot; &amp; ProjName &amp; &quot;&lt;/name&gt;&lt;icon&gt;icon.png&lt;/icon&gt;&quot;</param>
+                                                    <param id="3" name="Encoding Mode">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="438602454984736" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="996655538725330" type="System">
+                                                    <param id="0" name="Variable">projectno</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="868543641408173" type="System">
+                                                    <param id="0" name="Seconds">dt</param>
+                                                </action>
+                                                <action id="0" name="Set local value" sid="466163555343803" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;projectno&quot;</param>
+                                                    <param id="1" name="Value">projectno</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-block sid="963521979068980">
             <conditions>
                 <condition id="4" name="Compare selected item text" sid="999978696012430" type="AddConditions">

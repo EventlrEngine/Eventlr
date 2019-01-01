@@ -17,6 +17,7 @@
         <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Armaldio" id="armaldio_electron" version="1">Electron</plugin>
     </used-plugins>
     <used-behaviors />
@@ -87,6 +88,9 @@
         <object-type name="AJAX" sid="836827457841995">
             <plugin id="AJAX" />
         </object-type>
+        <object-type name="WebStorage" sid="486234431986266">
+            <plugin id="WebStorage" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -102,6 +106,7 @@
         <global-instance type="Electron" uid="12" />
         <global-instance type="Browser" uid="13" />
         <global-instance type="AJAX" uid="5" />
+        <global-instance type="WebStorage" uid="14" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -139,5 +144,7 @@
         <file name="1.11.0.min.js" />
         <file name="page-custom.css" />
         <file name="page-common.css" />
+        <file name="framlr.css" />
+        <file name="framlr.js" />
     </files-folder>
 </c2project>

@@ -3,6 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Common sheet</name>
     <events>
+        <comment>Contains the HTML of the project examples:</comment>
         <variable constant="0" name="projectexamples" sid="208883522900885" static="0" type="text"></variable>
+        <comment>Contains the icon of HTML to be used on its tab:</comment>
+        <variable constant="0" name="HTML" sid="134039596157635" static="0" type="text">&lt;i class=&apos;material-icons&apos;&gt;web&lt;/i&gt;</variable>
+        <comment>Contains the icon of CSS to be used on its tab:</comment>
+        <variable constant="0" name="CSS" sid="554874606531465" static="0" type="text">&lt;i class=&apos;material-icons&apos;&gt;format_paint&lt;/i&gt;</variable>
+        <comment>Contains the icon of JS to be used on its tab:</comment>
+        <variable constant="0" name="JS" sid="205902307412549" static="0" type="text">&lt;i class=&apos;material-icons&apos;&gt;description&lt;/i&gt;</variable>
     </events>
 </c2eventsheet>

@@ -1,1 +1,6 @@
 https://github.com/eventlr-engine/Eventlr/issues
+
+https://www.google.com.br/search?q=js+row+nesting&oq=js+row+nesting&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8
+https://www.scirra.com/manual/19/actions-conditions-and-expressions
+https://www.scirra.com/manual/74/events
+https://www.scirra.com/tutorials/823/creating-function

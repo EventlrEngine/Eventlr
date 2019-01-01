@@ -1,0 +1,8 @@
+Conditions
+Actions
+Parameters
+Expressions
+(Properties?)
+
+Integration:
+C2, C3, Godot, GDevelop

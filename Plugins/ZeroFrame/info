@@ -1,8 +1,0 @@
-<name>ZeroFrame</name>
-<id>zeroframe</id>
-<version>1.0.0.4</version>
-<description>API to communicate between ZeroNet sites and ZeroNet &gt; Browser</description>
-<author>Daniell Mesquita</author>
-<helpurl>https://github.com/DaniellMesquita/ZeroFrame-plugin</helpurl>
-<platform>ZeroNet</platform>
-<icon>icon.png</icon>
