@@ -1,6 +1,8 @@
 This file shows the Namecoin's transaction ID containing the hash of previous commit. It is for registering/copyright purposes.
 Namecoin transaction ID with previous commit(s) hash(es): 
-f2ad819b8a52b6cab9684edbc9115607e7b3efcb9322b51d0fe7f825906e86b0
+85609256ded819be7f789f6b9d507c33971cd57b2f8c986c6eaf1e57f7b67127
+94df0812455290fa6aad5cd6b5d3380ecbfe2e41a7777f82ce1ecce95214e102
+0bbf16cc695ed60ad96c8ede6a75cf4c6793c9bcf99619ff9f62eaea191c3180
 Address/Name/Domain: eventlr.bit
 Owner: Daniell Mesquita
 Namecoin transactions IDs with Ownership proof: 274b5273acbce4cabab9de49cd6a0ea56b29a8a917fd4b46931c3939566a310f
