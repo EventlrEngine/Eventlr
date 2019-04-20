@@ -26,6 +26,10 @@
                 <condition id="-25" name="On loader layout complete" sid="826974624500701" type="System" />
             </conditions>
             <actions>
+                <action id="14" name="Log" sid="557543812038176" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Exited Splashscreen, going to App screen&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="452834083979405" type="System">
                     <param id="0" name="Layout">App</param>
                 </action>
