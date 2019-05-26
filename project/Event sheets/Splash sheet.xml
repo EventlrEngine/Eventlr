@@ -10,9 +10,25 @@
                 <condition id="-2" name="On start of layout" sid="567136198704109" type="System" />
             </conditions>
             <actions>
-                <action id="32" name="Maximize" sid="598037119800698" type="Electron" />
+                <action id="29" name="Set Size" sid="610269747046633" type="Electron">
+                    <param id="0" name="Width">400</param>
+                    <param id="1" name="Height">300</param>
+                    <param id="2" name="Animated">1</param>
+                </action>
                 <action id="30" name="Set title" sid="846300614863977" type="Electron">
                     <param id="0" name="Title">&quot;Eventlr | Loading...&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="101734938746566" type="Splash">
+                    <param id="0" name="Javascript file">&quot;script.js&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="965766495441839" type="Splash">
+                    <param id="0" name="CSS file">&quot;style.css&quot;</param>
+                </action>
+                <action disabled="1" id="2" name="Import CSS file" sid="964266311994235" type="Splash">
+                    <param id="0" name="CSS file">&quot;dark-common.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="150627079319106" type="Splash">
+                    <param id="0" name="CSS file">&quot;robotofont.css&quot;</param>
                 </action>
                 <action id="14" name="Log" sid="310542645028916" type="Browser">
                     <param id="0" name="Type">0</param>

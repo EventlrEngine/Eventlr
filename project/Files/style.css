@@ -1,5 +1,6 @@
-#splash{background:#5890FF!important;color:#FFFFFF}
+#splash{-webkit-app-region:drag;user-select:none;cursor:default;background:#5890FF!important;color:#FFFFFF}
+#splash img{-webkit-user-drag:none;user-drag:none}
 #splash, #html{background: rgb(239, 239, 239);top: 0px!important;left: 0px!important;position: absolute!important;width: calc(100% + 0px) !important;height: calc(100% + 0px) !important;overflow: hidden!important;}
-#logo{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:120px;border-radius: 20px}
-#logotext{font-size:66px}
+#logo{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:45px;border-radius: 20px}
+#logotext{font-size:30px}
 #bellowtabs{height:calc(100% - 48px)!important;overflow-x:hidden}

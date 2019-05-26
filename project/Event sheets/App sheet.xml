@@ -23,43 +23,50 @@
                 <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
             </conditions>
             <actions>
+                <action id="32" name="Maximize" sid="309728962034080" type="Electron" />
                 <action id="19" name="Include Javascript file" sid="882374151284977" type="UI">
                     <param id="0" name="Javascript file">&quot;framlr.js&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="177736397343674" type="UI">
                     <param id="0" name="CSS file">&quot;framlr.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="374758587597753" type="UI">
-                    <param id="0" name="CSS file">&quot;style.css&quot;</param>
-                </action>
                 <action id="19" name="Include Javascript file" sid="406479633958176" type="UI">
                     <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
                 </action>
-                <action id="19" name="Include Javascript file" sid="449453807288538" type="UI">
-                    <param id="0" name="Javascript file">&quot;bootstrap.min.js&quot;</param>
+                <action id="19" name="Include Javascript file" sid="628450666609412" type="UI">
+                    <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                 </action>
-                <action id="19" name="Include Javascript file" sid="617059601472650" type="UI">
-                    <param id="0" name="Javascript file">&quot;material.min.js&quot;</param>
+                <action id="2" name="Import CSS file" sid="676511602654140" type="UI">
+                    <param id="0" name="CSS file">&quot;style.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="717295991544556" type="UI">
-                    <param id="0" name="CSS file">&quot;material.min.css&quot;</param>
-                </action>
-                <action id="2" name="Import CSS file" sid="619637854037738" type="UI">
+                <action id="2" name="Import CSS file" sid="614705583502028" type="UI">
                     <param id="0" name="CSS file">&quot;page-common.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="534920724400860" type="UI">
+                <action id="2" name="Import CSS file" sid="796623612700948" type="UI">
                     <param id="0" name="CSS file">&quot;page-custom.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="136264522101822" type="UI">
+                <action id="2" name="Import CSS file" sid="667209436972803" type="UI">
                     <param id="0" name="CSS file">&quot;app-common.css&quot;</param>
                 </action>
-                <action disabled="1" id="2" name="Import CSS file" sid="281244924847992" type="UI">
+                <action id="2" name="Import CSS file" sid="478784051142320" type="UI">
+                    <param id="0" name="CSS file">&quot;app-custom.css&quot;</param>
+                </action>
+                <action disabled="1" id="2" name="Import CSS file" sid="301117391653413" type="UI">
                     <param id="0" name="CSS file">&quot;dark-common.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="422311736345791" type="UI">
+                <action id="19" name="Include Javascript file" sid="895220770900198" type="UI">
+                    <param id="0" name="Javascript file">&quot;bootstrap.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="643152610748765" type="UI">
+                    <param id="0" name="Javascript file">&quot;material.min.js&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="341138614650283" type="UI">
+                    <param id="0" name="CSS file">&quot;material.min.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="119778888534338" type="UI">
                     <param id="0" name="CSS file">&quot;robotofont.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="557148267205950" type="UI">
+                <action id="2" name="Import CSS file" sid="270743973296793" type="UI">
                     <param id="0" name="CSS file">&quot;iconsfont.css&quot;</param>
                 </action>
                 <action id="30" name="Set title" sid="752116031735626" type="Electron">

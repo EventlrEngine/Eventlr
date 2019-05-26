@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Eventlr</name>
-    <description></description>
+    <description>Programming made easy for kids, teens, womens, olds, and even the experienced. Eventlr is the app to create apps, with ridiculously-easy visual event sheets with conditions/actions.</description>
     <version>r1</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
-    <app-id>com.plasmmer.eventlr</app-id>
+    <author>Daniell Mesquita</author>
+    <author-email>daniellplasmmer@gmail.com</author-email>
+    <author-website>dat://ca41c105bc3c2810cdb8e437890acc276d1bbb7054df845c0153825c16459270/user/dat://c518187c62c2061573dce0ac0874c1eeec98a0fe12a32248fe93b5be7a0f009c</author-website>
+    <app-id>com.plasnerd.eventlr</app-id>
     <unique-id>3edwekmoh0bdz</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
@@ -73,7 +73,7 @@
         <object-type name="TaskList" sid="297998074353326">
             <plugin id="AdvTextBox" />
         </object-type>
-        <object-type name="HTMLIFrame2" sid="103803971231536">
+        <object-type name="Splash" sid="103803971231536">
             <plugin id="HTML_iFrame" />
         </object-type>
         <object-type name="Electron" sid="568867484877459">
@@ -146,5 +146,7 @@
         <file name="page-common.css" />
         <file name="framlr.css" />
         <file name="framlr.js" />
+        <file name="script.js" />
+        <file name="app-custom.css" />
     </files-folder>
 </c2project>

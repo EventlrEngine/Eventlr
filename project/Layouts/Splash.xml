@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="HTMLIFrame2" uid="7">
+                <instance type="Splash" uid="7">
                     <properties>
                         <id-optional>splash</id-optional>
                         <class-optional></class-optional>
@@ -42,7 +42,7 @@
                         <iframe></iframe>
                         <url></url>
                         <html></html>
-                        <code>&lt;center&gt;&lt;img id=&quot;logo&quot; width=&quot;240px&quot; src=&quot;icon.png&quot;&gt;&lt;h1 id=&quot;logotext&quot;&gt;Eventlr&lt;/h1&gt;&lt;/br&gt;&lt;img src=&quot;loading.gif&quot;/ width=&quot;50px&quot;&gt;&lt;/center&gt;</code>
+                        <code>&lt;center&gt;&lt;img id=&quot;logo&quot; width=&quot;100px&quot; src=&quot;icon.png&quot;&gt;&lt;h1 id=&quot;logotext&quot;&gt;Eventlr&lt;/h1&gt;&lt;/br&gt;&lt;img src=&quot;loading.gif&quot;/ width=&quot;50px&quot;&gt;&lt;/center&gt;</code>
                         <color></color>
                         <text-selectable>Yes</text-selectable>
                         <auto-font-size>Default</auto-font-size>
