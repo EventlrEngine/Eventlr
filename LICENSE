@@ -1,0 +1,33 @@
+# OPI License v1 - 9th draft
+
+This is free and unencumbered software released into the community domain with restrictions/conditions.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the community domain according to specified conditions. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors, denying family-meritocracy. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+Anyone is free to copy, modify, publish, use, compile, or
+distribute this software, either in source code form or as a compiled
+binary, for any non-commercial purpose (except software that enables additional features through minimum donation of $1 or needs physical distribution), and by any means that are not used for evil behaviour.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction on free/libre, transparency and fairness focus/purpose, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, except sell copies of the Software (unless, as stated, is donation-ware or physically distributed), and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+1. This software (which also means its copies/forks) can not be made closed-source;
+2. This software can not include closed-source blobs/binaries/scripts/packages/dependencies, except when they are required to make CPU to work;
+3. This software can not be sold, althrough it is accepted to be donation-ware and/or sold if it is in physical distribution;
+4. If this software is distributed as donation-ware, it need to accept a minimum $25 if one-time payment, minimum $1 if monthly and/or minimum $12 if annual - any of these values can be lower - for activating its premium features;
+5. Yet on the cases where the software is donation-ware, its pro/premium features need to also be open-source, even if they are downloaded from external sources;
+6. In addition to the previous (5th - fifthy) and the 2nd (second) condition, any downloaded resource from the software need to be open-source, except when they are required to make non-CPU hardware to work;
+7. In addition to the previous condition, any in-app updates (and the ones on app/software stores, when applicable) should describe what is being removed/added/modified, provide the source-code of the update, its hash/signatures/checksums and option to build it with one click - can also include reviews from WoT, but not required;
+8. Any required-by-hardware closed-source dependency needs to be advertised to user;
+9. Any non-CPU required-by-hardware closed-source dependency, cannot be included with this Software, but manually downloaded through user option; dependency required to make CPU to work can be included with this Software, but also needs to be advertised to user;
+10. Any copy/distribution of this Software, needs to include its full source-code;
+11. For any contributor that provides significant changes, require to register its agreement with this license;
+12. The above copyright notice and this permission notice (except the credits to contributors/development leaders) shall be included in all copies or substantial portions of the Software;
+13. The bellow disclaimer notice need to be included in all copies or substantial portions of the Software, in a disclaimer file accessible on software's installer and its menu:
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://openplanetinitiative.github.io/opi-license/>
