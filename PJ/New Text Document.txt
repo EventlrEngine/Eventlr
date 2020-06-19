@@ -1,6 +1,0 @@
-file:///I:/ZeroNet-win-dist/data/1Fmwk685eaX7GjoQ7JKo3QvywizGfnYRCB/framlr.html
-https://electronjs.org/docs/api/browser-window#wingettitle
-https://github.com/Plasnerd/Framlr
-https://github.com/Cristian006/frameless-titlebar
-https://github.com/ChangJoo-Park/electron-frameless-frame/tree/master/src
-https://github.com/Cheapskate01/Material-Design-Electron-Boilerplate/tree/master/Example%20app/App

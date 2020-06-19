@@ -1,6 +1,17 @@
 https://github.com/eventlr-engine/Eventlr/issues
-
+https://www.scirra.com/manual/24/ace-implementations
+https://www.construct.net/en/forum/construct-2/general-discussion-17/extending-construct-javascript-37877
 https://www.google.com.br/search?q=js+row+nesting&oq=js+row+nesting&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8
-https://www.scirra.com/manual/19/actions-conditions-and-expressions
+https://www.scirra.com/manual/21/the-edit-time
+https://www.scirra.com/manual/20/properties
+https://www.scirra.com/manual/18/plugin-settings
 https://www.scirra.com/manual/74/events
 https://www.scirra.com/tutorials/823/creating-function
+
+C:\Program Files (x86)\ElectronForC2\resources\app\Eventlr\Platforms\Web
+
+C:\Users\Notebook Positivo\Desktop\Eventlr\temp
+
+https://bestofjs.org/
+
+http://thume.ca/

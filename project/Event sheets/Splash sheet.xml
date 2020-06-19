@@ -18,6 +18,17 @@
                 <action id="30" name="Set title" sid="846300614863977" type="Electron">
                     <param id="0" name="Title">&quot;Eventlr | Loading...&quot;</param>
                 </action>
+                <action id="19" name="Include Javascript file" sid="175924876477572" type="Splash">
+                    <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="289120416413277" type="UI">
+                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">&quot;&lt;script src=&apos;1.11.0.min.js&apos; onload=&apos;window.$ = window.jQuery = module.exports;&apos;&gt;&lt;/script&gt;&quot;</param>
+                </action>
+                <action disabled="1" id="19" name="Include Javascript file" sid="239667244945710" type="UI">
+                    <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
+                </action>
                 <action id="19" name="Include Javascript file" sid="101734938746566" type="Splash">
                     <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                 </action>

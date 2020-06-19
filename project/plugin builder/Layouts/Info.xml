@@ -546,7 +546,7 @@
                 </instance>
                 <instance type="Text" uid="19">
                     <properties>
-                        <text>(png only)</text>
+                        <text>(svg only)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-12,400,0</font>
                         <color>0,0,0</color>

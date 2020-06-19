@@ -135,6 +135,9 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="JSON" uid="48" />
+        <instance type="Dictionary" uid="49" />
+    </nonworld-instances>
     <effects />
 </c2layout>

@@ -13,7 +13,9 @@
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Pinco, Scirra" id="AdvTextBox" version="1.700000048">Advanced Text box</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1.200000048">JSON</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -124,6 +126,12 @@
         </object-type>
         <object-type name="Function" sid="750091408528610">
             <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="JSON" sid="825102484628924">
+            <plugin id="JSON" />
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="461213074622226">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families />

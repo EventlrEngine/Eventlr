@@ -1,8 +1,8 @@
 Conditions
 Actions
-Parameters
+- Parameters
 Expressions
-(Properties?)
+- (Properties?)
 
 Integration:
 C2, C3, Godot, GDevelop
