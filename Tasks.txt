@@ -1,0 +1,23 @@
+- fix issue of app resources (like in USV Player)
+- rename "Plugins" as "Addons" (Eventlr Plugin Builder)
+
+- First addon: System
+
+-
+-
+
+- Project's JSON stores events but still can't store sub-events
+
+-
+-
+
+- First sample project: Cinnabar GYM PokeQuiz
+- Sample project: GSC PokeQuiz 
+
+
+
+
+-
+-
+
+- Eventlr Addon Builder comes with Eventlr but can only run if HTML5Apps is installed
