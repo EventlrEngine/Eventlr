@@ -1,0 +1,26 @@
+(can add value, which can be boolean, number or text)
+(can list and add values to events)
+
+[EMPTY CONDITION - to focus on actions - system addon]
+[ACTION] command addon - say/message (echo - support oneline text or cat ASCII)
+
+[ACTION] set/change value
+[ACTION] linux addon - download/fetch URL (message, APIs, files, etc)
+
+[ACTION] ethereum addon - fill wallet in testnet (rinkeby - accept ETH and tokens such as keep)
+
+[CONDITION] file exists (can also inverse this condition, as for others)
+[CONDITION] folder exists
+
+[CONDITION] compare values (if boolean is true, if number/text is equal to other value)
+
+[ACTION] server addon - get IP (SERVER_IP=$(curl -s ipecho.net/plain))
+[CONDITION] server addon - IP if IP is = to
+
+[ACTION] linux addon - update all apps (apt-get update for debian - only debian supported for now)
+[ACTION] linux addon - new folder (mkdir -p - also support $HOME and other strings/system values)
+[ACTION] linux addon - new file
+[ACTION] linux addon - remove file
+[ACTION] linux addon - remove folder
+
+[ACTION] command addon - ask question (this is an condition. actions are about accepted answers and the events they triggers)
