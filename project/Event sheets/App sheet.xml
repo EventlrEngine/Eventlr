@@ -81,16 +81,19 @@
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Eventlr/start.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="444182556552892" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
                 <action disabled="1" id="0" name="Request URL" sid="242176821890864" type="AJAX">
                     <param id="0" name="Tag">&quot;start&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/start.html&quot;</param>
                 </action>
                 <action id="9" name="Read" sid="754346211517411" type="Electron">
-                    <param id="0" name="Tag">&quot;start&quot;</param>
+                    <param id="0" name="Tag">&quot;newproject&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/newproject.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="-16" name="Wait" sid="444182556552892" type="System">
+                <action id="-16" name="Wait" sid="888731911206186" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
                 <action id="9" name="Read" sid="175519741886109" type="Electron">
@@ -102,8 +105,11 @@
                     <param id="0" name="Tag">&quot;projectexamples&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/content/projectexamples.html&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="152494580716821" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
                 <action id="9" name="Read" sid="652867910364009" type="Electron">
-                    <param id="0" name="Tag">&quot;newproject&quot;</param>
+                    <param id="0" name="Tag">&quot;newprojectdialog&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Eventlr/res/dialogs/newproject.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
@@ -121,11 +127,11 @@
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/projectexamples.html&quot;</param>
                 </action>
                 <action id="9" name="Read" sid="189315633253329" type="Electron">
-                    <param id="0" name="Tag">&quot;start&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/res/dialogs/implementation.html&quot;</param>
+                    <param id="0" name="Tag">&quot;implementation&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Eventlr/res/dialogs/implementation.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="0" name="Request URL" sid="235526885506901" type="AJAX">
+                <action disabled="1" id="0" name="Request URL" sid="235526885506901" type="AJAX">
                     <param id="0" name="Tag">&quot;implementation&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/res/dialogs/implementation.html&quot;</param>
                 </action>
@@ -205,6 +211,9 @@
                             <param id="1" name="Set">Electron.LastReadAsync</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
+                        <action id="-16" name="Wait" sid="353266886930339" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="314185511515319">
@@ -226,12 +235,15 @@
                             <param id="1" name="Set">&quot;&quot;</param>
                             <param id="2" name="Append">projectexamples</param>
                         </action>
+                        <action id="-16" name="Wait" sid="545619518663735" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block disabled="1" sid="284048100188827">
                     <conditions>
                         <condition id="3" name="On read success" sid="101325495482847" type="Electron">
-                            <param id="0" name="Tag">&quot;newproject&quot;</param>
+                            <param id="0" name="Tag">&quot;newprojectdialog&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -264,9 +276,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="899267080927006">
+                <event-block disabled="1" sid="899267080927006">
                     <conditions>
-                        <condition id="0" name="On completed" sid="575496000085459" type="AJAX">
+                        <condition id="3" name="On read success" sid="623096374208322" type="Electron">
                             <param id="0" name="Tag">&quot;implementation&quot;</param>
                         </condition>
                     </conditions>
@@ -274,7 +286,7 @@
                         <action id="24" name="Get elements" sid="560014265376612" type="UI">
                             <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">AJAX.LastData</param>
+                            <param id="2" name="Append">Electron.LastReadAsync</param>
                         </action>
                     </actions>
                 </event-block>
