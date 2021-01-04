@@ -19,6 +19,9 @@
         <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
         <variable constant="0" name="nextaction" sid="203836370324529" static="0" type="number">2</variable>
         <variable constant="0" name="project_type" sid="798195279090344" static="0" type="number">0</variable>
+        <variable constant="0" name="PreviousDialog" sid="890784090729535" static="0" type="text"></variable>
+        <variable constant="0" name="CurrentDialog" sid="648638824160412" static="0" type="text"></variable>
+        <variable constant="0" name="NextDialog" sid="390286921304126" static="0" type="text"></variable>
         <event-block sid="155560204341686">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
@@ -369,8 +372,16 @@
                                 <action id="17" name="Execute Javascript" sid="895119045654351" type="Browser">
                                     <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="817642826346570" type="System">
+                                    <param id="0" name="Variable">PreviousDialog</param>
+                                    <param id="1" name="Value">&quot;newprojectDialog&quot;</param>
+                                </action>
                                 <action id="17" name="Execute Javascript" sid="991069232644398" type="Browser">
                                     <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog2&apos;).modal(&apos;show&apos;)&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="189268442356349" type="System">
+                                    <param id="0" name="Variable">CurrentDialog</param>
+                                    <param id="1" name="Value">&quot;newprojectDialog2&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="745750124330236" type="System">
                                     <param id="0" name="Seconds">dt</param>
@@ -384,6 +395,30 @@
                                     <param id="0" name="ID/Class">&quot;#project_type_title2&quot;</param>
                                     <param id="1" name="Set">&quot;CommandLine program (Bash/Shell)&quot;</param>
                                     <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="830584368693212">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="312896004313078" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="121051657793339">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="210918176539335" type="UI">
+                                    <param id="0" name="C2">&quot;returndialog&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="879553747107081" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#&quot; &amp; CurrentDialog &amp; &quot;&apos;).modal(&apos;hide&apos;)&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="221999046849872" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#&quot; &amp; PreviousDialog &amp; &quot;&apos;).modal(&apos;show&apos;)&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -486,6 +521,14 @@
                                     <actions>
                                         <action id="17" name="Execute Javascript" sid="288230439658401" type="Browser">
                                             <param id="0" name="Javascript">&quot;$(&apos;#examplesDialog&apos;).modal(&apos;show&apos;)&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="205265370407153" type="System">
+                                            <param id="0" name="Variable">PreviousDialog</param>
+                                            <param id="1" name="Value">&quot;newprojectDialog2&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="216517696175191" type="System">
+                                            <param id="0" name="Variable">CurrentDialog</param>
+                                            <param id="1" name="Value">&quot;examplesDialog&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
