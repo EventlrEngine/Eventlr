@@ -21,14 +21,6 @@
                 <action id="19" name="Include Javascript file" sid="175924876477572" type="Splash">
                     <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
                 </action>
-                <action id="-16" name="Wait" sid="949526260073354" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="24" name="Get elements" sid="289120416413277" type="UI">
-                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">&quot;&lt;script src=&apos;1.11.0.min.js&apos; onload=&apos;window.$ = window.jQuery = module.exports;&apos;&gt;&lt;/script&gt;&quot;</param>
-                </action>
                 <action disabled="1" id="19" name="Include Javascript file" sid="239667244945710" type="UI">
                     <param id="0" name="Javascript file">&quot;1.11.0.min.js&quot;</param>
                 </action>
@@ -56,6 +48,14 @@
                 <condition id="-25" name="On loader layout complete" sid="826974624500701" type="System" />
             </conditions>
             <actions>
+                <action id="24" name="Get elements" sid="289120416413277" type="Splash">
+                    <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">&quot;&lt;script src=&apos;1.11.0.min.js&apos; onload=&apos;window.$ = window.jQuery = module.exports;&apos;&gt;&lt;/script&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="949526260073354" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
                 <action id="14" name="Log" sid="557543812038176" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Exited Splashscreen, going to App screen&quot;</param>

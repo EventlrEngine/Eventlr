@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout order="2">App</layout>
-        <event-sheet active="1" order="1">Splash sheet</event-sheet>
+        <layout active="1" order="2">App</layout>
+        <event-sheet order="1">Splash sheet</event-sheet>
         <event-sheet order="3">App sheet</event-sheet>
         <event-sheet order="4">Common sheet</event-sheet>
     </open-tabs>
