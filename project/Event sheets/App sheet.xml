@@ -18,6 +18,7 @@
         <variable constant="0" name="nextevent" sid="892019285904084" static="0" type="number">1</variable>
         <variable constant="0" name="nextcondition" sid="410698932177556" static="0" type="number">2</variable>
         <variable constant="0" name="nextaction" sid="203836370324529" static="0" type="number">2</variable>
+        <variable constant="0" name="project_type" sid="798195279090344" static="0" type="number">0</variable>
         <event-block sid="155560204341686">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="469280815140683" type="System" />
@@ -275,6 +276,34 @@
                             <param id="1" name="Set">&quot;&quot;</param>
                             <param id="2" name="Append">Electron.LastReadAsync</param>
                         </action>
+                        <action id="-16" name="Wait" sid="582964136856913" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="9" name="Read" sid="103272756627824" type="Electron">
+                            <param id="0" name="Tag">&quot;newprojectdialog2&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Eventlr/res/dialogs/newproject2.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="860112678872352" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="144222866950418">
+                    <conditions>
+                        <condition id="3" name="On read success" sid="831208762830558" type="Electron">
+                            <param id="0" name="Tag">&quot;newprojectdialog2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="797584331379773" type="UI">
+                            <param id="0" name="ID/Class">&quot;#fb-root&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">Electron.LastReadAsync</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="618793284247179" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -315,6 +344,47 @@
                             </conditions>
                             <actions>
                                 <action id="31" name="Minimize" sid="416410423176137" type="Electron" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="177338749653310">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="792054652082857" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="591891589001490">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="241575243591120" type="UI">
+                                    <param id="0" name="C2">&quot;blankproject0&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="806069748703636" type="System">
+                                    <param id="0" name="Variable">project_type</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="895119045654351" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="991069232644398" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog2&apos;).modal(&apos;show&apos;)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="745750124330236" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="24" name="Get elements" sid="593637474578301" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#project_type_title&quot;</param>
+                                    <param id="1" name="Set">&quot;CommandLine program (Bash/Shell)&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                                <action id="24" name="Get elements" sid="187939549866790" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#project_type_title2&quot;</param>
+                                    <param id="1" name="Set">&quot;CommandLine program (Bash/Shell)&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -399,7 +469,7 @@
                             </conditions>
                             <actions>
                                 <action id="17" name="Execute Javascript" sid="651466832141865" type="Browser">
-                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog&apos;).modal(&apos;hide&apos;)&quot;</param>
+                                    <param id="0" name="Javascript">&quot;$(&apos;#newprojectDialog2&apos;).modal(&apos;hide&apos;)&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
