@@ -1,3 +1,5 @@
+- Detect which dialog is open
+
 --------------------------------------------- new menu for "Project Examples" card
 <div class="accordion" id="accordionExample">
   <div class="card">
