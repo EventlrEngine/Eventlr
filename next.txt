@@ -16,4 +16,4 @@ https://bestofjs.org/
 
 http://thume.ca/
 
-Eventlr's fiddle (pbls snippet of event-sheet and preview)
+Eventlr's fiddle (pbls snippet of event-sheet and preview - Fiddlr or Sniplr)
