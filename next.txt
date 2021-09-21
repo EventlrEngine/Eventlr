@@ -15,3 +15,5 @@ C:\Users\Notebook Positivo\Desktop\Eventlr\temp
 https://bestofjs.org/
 
 http://thume.ca/
+
+Eventlr's fiddle (pbls snippet of event-sheet and preview)
